@@ -1,0 +1,15 @@
+[package]
+name = "univerz-solana-backend"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+rust-version = "1.75.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "univerz_solana_backend"
+
+[dependencies]
+anchor-lang = { version = "0.29.0", features = ["init-if-needed"] }
+anchor-spl = "0.29.0"
+switchboard-solana = "0.29.0" # Match this to your project's Switchboard integration version if you used a different one
