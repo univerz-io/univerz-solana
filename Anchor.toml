@@ -6,12 +6,16 @@ skip-lint = false
 anchor_version = "0.29.0"
 solana_version = "1.18.26"
 
+# 🏛️ WORKSPACE ALIGNMENT: Explicitly maps the contract binary across both testing and staging deployments
 [programs.localnet]
 univerz_solana_backend = "3uqqbb6uzsy5koJgsJqKR86tmNLNBLp3d7HtozHi4LZh"
 
+[programs.devnet]
+univerz_solana_backend = "3uqqbb6uzsy5koJgsJqKR86tmNLNBLp3d7HtozHi4LZh"
+
+# 🚀 TARGET ENVIRONMENT: Switched execution engine directly to public Devnet cluster validators
 [provider]
-# Configured to localnet so tests execute locally and for free
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
@@ -19,6 +23,7 @@ test = "npx mocha tests/univerz-arena.ts --timeout 1000000"
 
 [hooks]
 
+# 🧬 LOCAL SIMULATION ENGINE (Keep this structured here for your reference logs)
 [test.validator]
 bind_address = "127.0.0.1"
 url = "https://api.mainnet-beta.solana.com"
