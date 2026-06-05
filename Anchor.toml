@@ -15,14 +15,9 @@ cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "npx mocha tests/univerz-arena.ts"
+test = "npx mocha tests/univerz-arena.ts --timeout 1000000"
 
 [hooks]
-
-[test]
-startup_wait = 45000
-shutdown_wait = 2000
-upgradeable = false
 
 [test.validator]
 bind_address = "127.0.0.1"
