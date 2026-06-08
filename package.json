@@ -7,7 +7,9 @@
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
   },
   "dependencies": {
-    "@anchor-lang/core": "^1.0.2"
+    "@anchor-lang/core": "^1.0.2",
+    "@layerzerolabs/lz-v2-utilities": "^3.0.168",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@coral-xyz/anchor": "^0.29.0",
@@ -15,7 +17,7 @@
     "@solana/web3.js": "^1.91.8",
     "@types/chai": "^5.2.3",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "chai": "^6.2.2",
     "mocha": "^11.7.6",
     "prettier": "^2.6.2",
